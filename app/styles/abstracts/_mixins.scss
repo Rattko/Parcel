@@ -1,0 +1,18 @@
+// CLEARFIX
+
+@mixin clearfix {
+	&:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
+// FLEXBOX
+
+@mixin flexbox($justify-content: space-between, $align-items: center, $align-content: center) {
+	display: flex;
+	justify-content: $justify-content;
+	align-items: $align-items;
+	align-content: $align-content;
+}

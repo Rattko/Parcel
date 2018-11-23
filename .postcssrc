@@ -1,0 +1,8 @@
+{
+  "plugins": {
+    "autoprefixer": true,
+    "postcss-plugin-px2rem": {
+      "rootValue": 16
+    }
+  }
+}

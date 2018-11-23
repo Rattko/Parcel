@@ -1,0 +1,29 @@
+// OUTDATED MESSAGE IF BROWSER IS IE
+
+p.browser-upgrade {
+	color: #333333;
+	padding: 2rem 1rem;
+	text-align: center;
+	font: {
+		size: 2rem;
+		style: italic;
+	}
+
+	strong {
+		color: #ff9100;
+	}
+
+	a {
+		color: #bada55;
+		white-space: nowrap;
+		text-decoration: underline;
+	}
+
+	@media (max-width: 555px) {
+		font-size: 1.5rem;
+	}
+
+	@media (max-width: 415px) {
+		font-size: 1rem;
+	}
+}
