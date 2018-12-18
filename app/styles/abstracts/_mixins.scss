@@ -1,6 +1,6 @@
 // CLEARFIX
 
-@mixin clearfix {
+@mixin clearfix() {
 	&:after {
 		content: '';
 		display: table;
@@ -15,4 +15,65 @@
 	justify-content: $justify-content;
 	align-items: $align-items;
 	align-content: $align-content;
+}
+
+// AUTO CENTER
+
+@mixin auto-center() {
+	margin: {
+		left: auto;
+		right: auto;
+	}
+}
+
+// POSITION ELEMENT
+
+@mixin position($position: relative, $top: false, $left: false, $right: false, $bottom: false) {
+	position: $position;
+	@if $top { top: $top; }
+	@if $left { left: $left; }
+	@if $right { right: $right; }
+	@if $bottom { bottom: $bottom; }
+}
+
+// CENTER VERTICALLY OR HORIZONTALLY
+
+@mixin center($position: relative, $top: false, $left: false) {
+	position: $position;
+	@if $top {
+		top: $top;
+		transform: translateY(-50%);
+	}
+	@if $left {
+		left: $left;
+		transform: translateX(-50%);
+	}
+}
+
+// PSEUDO ELEMENTS
+
+@mixin pseudo($content: '', $display: block, $position: absolute) {
+	content: $content;
+	display: $display;
+	position: $position;
+}
+
+// FONT
+
+@mixin font($color: false, $family: false, $size: false, $weight: false, $line-height: false) {
+	@if $color { color: $color; }
+	@if $family { font-family: $family; }
+	@if $size { font-size: $size; }
+	@if $weight { font-weight: $weight; }
+	@if $line-height { line-height: $line-height; }
+}
+
+// FONT AWESOME
+
+@mixin font-awesome($content: '', $family: 'Font Awesome 5 Free', $weight: false, $color: false, $size: 150%) {
+	@include pseudo($content: $content);
+	font-family: $family;
+	@if $weight { font-weight: $weight; }
+	@if $color { color: $color; }
+	font-size: $size;
 }
