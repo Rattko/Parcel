@@ -1,8 +1,6 @@
 {
   "plugins": {
     "autoprefixer": true,
-    "postcss-plugin-px2rem": {
-      "rootValue": 16
-    }
+    "postcss-plugin-px2rem": { "rootValue": 16 }
   }
 }

@@ -1,11 +1,11 @@
 {
-  "name": "Parcel",
+  "name": "parcel",
   "version": "1.0.0",
   "description": "...",
   "main": "index.js",
   "scripts": {
-    "start": "parcel app/index.html",
-    "build": "parcel build app/index.html --public-url ./"
+    "start": "parcel app/*.html",
+    "build": "parcel build app/*.html --public-url ./"
   },
   "author": {
     "name": "Rattko",
@@ -16,7 +16,6 @@
     "@fortawesome/fontawesome-free": "^5.5.0",
     "bootstrap": "^4.1.3",
     "jquery": "^3.3.1",
-    "lazysizes": "^4.1.4",
     "normalize.css": "^8.0.0",
     "popper.js": "^1.14.5",
     "slick-carousel": "^1.8.1"

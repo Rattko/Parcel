@@ -1,29 +1,67 @@
 // OUTDATED MESSAGE IF BROWSER IS IE
 
-p.browser-upgrade {
-	color: #333333;
-	padding: 2rem 1rem;
+div.outdated {
+	@include center($position: absolute, $left: 50%);
+
+	color: #A2A3A2;
+	background-color: #333333;
+	width: 25rem;
+	margin-top: 2rem;
+	padding: 1.5rem 1rem;
+	border-radius: 1rem;
 	text-align: center;
-	font: {
-		size: 2rem;
-		style: italic;
+	box-shadow: 0.05rem 0.05rem 0.5rem #333333;
+
+	@media (max-width: 420px) {
+		width: 18rem;
+		padding: 1rem 0.5rem;
 	}
 
-	strong {
-		color: #ff9100;
+	p {
+		margin-bottom: 1rem;
+		padding: 0 1rem;
+		font: {
+			size: 1.25rem;
+			style: italic;
+		}
+
+		strong {
+			color: #FF9100;
+		}
+
+		a {
+			color: #BADA55;
+			white-space: nowrap;
+			text-decoration: underline;
+		}
+
+		@media (max-width: 420px) {
+			font-size: 0.85rem;
+			margin-bottom: 0.5rem;
+		}
 	}
 
-	a {
-		color: #bada55;
-		white-space: nowrap;
+	span {
+		color: #FF9100;
 		text-decoration: underline;
+		cursor: pointer;
+
+		@media (max-width: 420px) {
+			font-size: 0.75rem;
+		}
+	}
+}
+
+.fade-out {
+	animation: fade-out 0.25s;
+}
+
+@keyframes fade-out {
+	0% {
+		opacity: 1;
 	}
 
-	@media (max-width: 555px) {
-		font-size: 1.5rem;
-	}
-
-	@media (max-width: 415px) {
-		font-size: 1rem;
+	100% {
+		opacity: 0;
 	}
 }
